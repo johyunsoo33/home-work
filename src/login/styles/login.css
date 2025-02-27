@@ -9,7 +9,11 @@ body *::before {
 
 header {
   margin-block-start: 6.25rem;
-
+  a {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
   img {
     display: block;
     inline-size: 14.375rem;
@@ -27,6 +31,9 @@ header {
   margin: 1.875rem 1.25rem;
   block-size: fit-content;
 
+  &:focus {
+    outline: var(--focus-color);
+  }
   form {
     display: block;
     inline-size: 100%;
@@ -46,6 +53,15 @@ header {
     border-color: #03cf5d;
     background-color: #e9f0fd;
     outline: var(--focus-color);
+  }
+  .errorMessage {
+    display: none;
+    color: rgb(255, 63, 63);
+    font-size: 0.625rem;
+  }
+
+  form:invalid:focus-within .errorMessage {
+    display: block;
   }
 
   .loginBtn {
