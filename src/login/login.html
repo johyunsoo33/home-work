@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="./src/assets/favicon/likelion.svg" />
-    <link rel="stylesheet" href="./src/login/styles/login.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
     <link
       href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
       rel="stylesheet"
@@ -25,7 +25,7 @@
   <body>
     <header>
       <a href="https://www.naver.com/">
-        <img src="./src/login/assetes/naverLogo.svg" alt="네이버 로고 이미지" />
+        <img src="./assetes/naverLogo.svg" alt="네이버 로고 이미지" />
       </a>
     </header>
     <main class="loginForm">
@@ -43,8 +43,14 @@
           <aside class="autoLogin">
             <button class="autoLoginImg" type="button">
               <img
-                src="./src/login/assetes/autoLoginUnCheckImg.svg"
+                class="unCheck"
+                src="./assetes/autoLoginUnCheckImg.svg"
                 alt="로그인 상태 유지 미체크 상태 이미지"
+              />
+              <img
+                class="check"
+                src="./assetes/autoLoginCheckImg.svg"
+                alt="로그인 상태 유지 체크 상태 이미지"
               />
             </button>
 
@@ -52,7 +58,8 @@
           </aside>
           <aside class="ipSecurity">
             <a href="./pages/ip_security.html">IP 보안 </a>
-            <button type="button">OFF</button>
+            <button type="button" class="securityOff">OFF</button>
+            <button type="button" class="securityOn" hidden>ON</button>
           </aside>
         </div>
       </form>

@@ -113,6 +113,17 @@ header {
         width: 100%;
         height: 100%;
       }
+      .check {
+        display: none;
+      }
+      .autoLoginImg:focus {
+        .unCheck {
+          display: none;
+        }
+        .check {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -128,9 +139,6 @@ header {
   }
   button {
     color: #dadada;
-  }
-  button:focus {
-    color: var(--login-bgColor);
   }
   @media (min-width: 768px) {
     display: inline;
