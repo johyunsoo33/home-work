@@ -34,6 +34,11 @@ header {
   &:focus {
     outline: var(--focus-color);
   }
+
+  @media (min-width: 768px) {
+    inline-size: 31.25rem;
+    margin: 1.875rem auto;
+  }
   form {
     display: block;
     inline-size: 100%;
