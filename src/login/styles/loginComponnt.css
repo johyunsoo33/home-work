@@ -45,7 +45,9 @@ body {
     font-size: 0.625rem;
   }
 }
-
+input:user-invalid + .errorMessage {
+  display: block;
+}
 /* 로그인 버튼 컴포넌트 */
 .loginBtn {
   inline-size: 100%;
