@@ -99,9 +99,6 @@ header {
       color: #dadada;
       content: "OFF";
     
-      a{
-        
-      }
     }
     #securityToggle:checked + label::before {
       color: #03cf5d;
