@@ -17,7 +17,7 @@ header {
 }
 
 .loginForm {
-  margin: 1.875rem 1.25rem;
+  margin: 2.8125rem auto;
   block-size: fit-content;
 
   &:focus {
@@ -26,11 +26,9 @@ header {
 
   @media (min-width: 768px) {
     inline-size: 31.25rem;
-    margin: 1.875rem auto;
   }
   .formArea {
     inline-size: 100%;
-
     input {
       inline-size: 100%;
       font-size: var(--input-text-size);
@@ -51,6 +49,7 @@ header {
     justify-content: space-between;
     flex-flow: row-reverse nowrap;
     align-items: center;
+    margin-top: 0.625rem;
 
     @media (min-width: 768px) {
       flex-flow: row nowrap;
@@ -65,7 +64,6 @@ header {
     }
     .autoLogin {
       display: flex;
-      padding-block-start: 0.625rem;
 
       .autoLoginImg {
         margin-inline-start: 0.3125rem;
@@ -90,10 +88,8 @@ header {
 }
 
 .ipSecurity {
-  padding-inline-start: 0.625rem;
-
   @media (min-width: 768px) {
-    display: inline;
+    display: block;
     input {
       display: none;
     }
