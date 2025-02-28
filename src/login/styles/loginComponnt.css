@@ -1,0 +1,94 @@
+body {
+  --focus-color: #24388d;
+  --input-text-size: 0.875rem;
+  --input-box-height: 2.8125rem;
+  --border-color: #dadada;
+  --input-bgColor: #fff;
+  --login-bgColor: #03cf5d;
+  --checkBtn-width: 1.5rem;
+  --checkBtn-height: 1.5rem;
+}
+
+/* 네이버 로고 컴포넌트 */
+.naverLogo {
+  display: block;
+  width: fit-content;
+  img {
+    display: block;
+    inline-size: 14.375rem;
+    margin: 0.625rem auto;
+  }
+}
+
+/* 로그인 폼 영역 컴포넌트 */
+.formArea {
+  display: block;
+  inline-size: 100%;
+
+  input {
+    inline-size: 100%;
+    display: block;
+    font-size: var(--input-text-size);
+    block-size: var(--input-box-height);
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bgColor);
+    margin-block-start: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  input:focus {
+    border-color: #03cf5d;
+    background-color: #e9f0fd;
+    outline: var(--focus-color);
+  }
+
+  .errorMessage {
+    display: none;
+    color: rgb(255, 63, 63);
+    font-size: 0.625rem;
+  }
+}
+
+/* 로그인 버튼 컴포넌트 */
+.loginBtn {
+  inline-size: 100%;
+  font-size: 1rem;
+  block-size: var(--input-box-height);
+  color: #fff;
+  background-color: var(--login-bgColor);
+  margin-block-start: 1.25rem;
+  text-align: center;
+  border: none;
+}
+
+/* 자동로그인 컴포넌트 */
+.autoLogin {
+  /* 자동 로그인 여부 토글 컴포넌트 */
+  .autoLoginImg {
+    display: none;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-inline-end: 0.3125rem;
+    background: url("/src/login/assetes/autoLoginUnCheckImg.svg");
+  }
+
+  label {
+    display: block;
+    inline-size: var(--checkBtn-width);
+    block-size: var(--checkBtn-height);
+    margin-right: 0.325rem;
+  }
+}
+/* ip보안 컴포넌트 */
+.ipSecurity {
+  padding-inline-start: 0.625rem;
+  display: none;
+  a {
+    font-size: 1rem;
+    color: #121212;
+    text-decoration: none;
+  }
+  button {
+    color: #dadada;
+  }
+}

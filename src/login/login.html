@@ -24,12 +24,12 @@
   </head>
   <body>
     <header>
-      <a href="https://www.naver.com/">
+      <a href="https://www.naver.com/" class="naverLogo">
         <img src="./assetes/naverLogo.svg" alt="네이버 로고 이미지" />
       </a>
     </header>
     <main class="loginForm">
-      <form action="\">
+      <form action="\" class="formArea">
         <input type="email" placeholder="아이디(이메일)" required />
         <span class="errorMessage"
           >아이디는 이메일 형식으로 작성해야 합니다</span
@@ -39,30 +39,27 @@
           >비밀번호는 10자리 이내로 입력해주셔야합니다.</span
         >
         <button type="submit" class="loginBtn">로그인</button>
-        <div class="loginBottomArea">
-          <aside class="autoLogin">
-            <button class="autoLoginImg" type="button">
-              <img
-                class="unCheck"
-                src="./assetes/autoLoginUnCheckImg.svg"
-                alt="로그인 상태 유지 미체크 상태 이미지"
-              />
-              <img
-                class="check"
-                src="./assetes/autoLoginCheckImg.svg"
-                alt="로그인 상태 유지 체크 상태 이미지"
-              />
-            </button>
-
-            <button type="button">로그인 상태 유지</button>
-          </aside>
-          <aside class="ipSecurity">
-            <a href="./pages/ip_security.html">IP 보안 </a>
-            <button type="button" class="securityOff">OFF</button>
-            <button type="button" class="securityOn" hidden>ON</button>
-          </aside>
-        </div>
       </form>
+
+      <div class="loginBottomArea">
+        <aside class="autoLogin">
+          <input
+            class="autoLoginImg"
+            type="checkbox"
+            id="autoLoginCheck"
+          /><label for="autoLoginCheck"></label>
+
+          <p>로그인 상태 유지</p>
+        </aside>
+        <aside class="ipSecurity">
+          <a href="./pages/ip_security.html">IP 보안 </a>
+          <input
+            type="checkbox"
+            class="securityToggle"
+            id="securityToggle"
+          /><label for="securityToggle"></label>
+        </aside>
+      </div>
     </main>
   </body>
 </html>

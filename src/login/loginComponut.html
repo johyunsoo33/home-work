@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/login/styles/login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 네이버 헤더 로고 -->
+    <a href="https://www.naver.com/">
+      <img src="./assetes/naverLogo.svg" alt="네이버 로고 이미지" />
+    </a>
+
+    <!-- 아이디/비밀번호 입력 폼 -->
+    <input type="email" placeholder="아이디(이메일)" required />
+    <span class="errorMessage">아이디는 이메일 형식으로 작성해야 합니다</span>
+
+    <!-- 로그인 버튼 -->
+    <button type="submit" class="loginBtn">로그인</button>
+
+    <!-- 자동 로그인 입력 토글 -->
+    <aside class="autoLogin">
+      <input class="autoLoginImg" type="checkbox" id="autoLoginCheck" /><label
+        for="autoLoginCheck"
+      ></label>
+
+      <p>로그인 상태 유지</p>
+    </aside>
+
+    <!-- ip보안 스위치 -->
+    <aside class="ipSecurity">
+      <a href="./pages/ip_security.html">IP 보안 </a>
+      <input type="checkbox" class="securityToggle" id="securityToggle" /><label
+        for="securityToggle"
+      ></label>
+    </aside>
+
+    <!-- 로그인 폼 -->
+    <form action="\" class="formArea">
+      <input type="email" placeholder="아이디(이메일)" required />
+      <span class="errorMessage">아이디는 이메일 형식으로 작성해야 합니다</span>
+      <input type="password" placeholder="비밀번호" required />
+      <span class="errorMessage"
+        >비밀번호는 10자리 이내로 입력해주셔야합니다.</span
+      >
+      <button type="submit" class="loginBtn">로그인</button>
+    </form>
+  </body>
+</html>

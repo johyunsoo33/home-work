@@ -1,4 +1,5 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import url(../styles/loginComponnt.css);
 body *,
 body *::after,
 body *::before {
@@ -6,28 +7,15 @@ body *::before {
   font-size: 1rem;
   color: #121212;
 }
-
+/* 로그인 */
 header {
   margin-block-start: 6.25rem;
-  a {
-    display: block;
+
+  .naverLogo {
     margin: 0 auto;
-    width: fit-content;
-  }
-  img {
-    display: block;
-    inline-size: 14.375rem;
-    margin: 0.625rem auto;
   }
 }
 .loginForm {
-  --focus-color: #24388d;
-  --input-text-size: 0.875rem;
-  --input-box-height: 2.8125rem;
-  --border-color: #dadada;
-  --input-bgColor: #fff;
-  --login-bgColor: #03cf5d;
-
   margin: 1.875rem 1.25rem;
   block-size: fit-content;
 
@@ -39,55 +27,13 @@ header {
     inline-size: 31.25rem;
     margin: 1.875rem auto;
   }
-  form {
-    display: block;
-    inline-size: 100%;
-  }
-
-  input {
-    inline-size: 100%;
-    display: block;
-    font-size: var(--input-text-size);
-    block-size: var(--input-box-height);
-    border: 1px solid var(--border-color);
-    background-color: var(--input-bgColor);
-    margin-block-start: 1.25rem;
-    padding: 1.25rem;
-  }
-  input:focus {
-    border-color: #03cf5d;
-    background-color: #e9f0fd;
-    outline: var(--focus-color);
-  }
-  .errorMessage {
-    display: none;
-    color: rgb(255, 63, 63);
-    font-size: 0.625rem;
-  }
-
-  form:invalid:focus-within .errorMessage {
-    display: block;
-  }
-
-  .loginBtn {
-    inline-size: 100%;
-    font-size: 1rem;
-    block-size: var(--input-box-height);
-    color: #fff;
-    background-color: var(--login-bgColor);
-    margin-block-start: 1.25rem;
-    text-align: center;
-    border: none;
-  }
 
   .loginBottomArea {
-    --checkBtn-width: 1.5rem;
-    --checkBtn-height: 1.5rem;
-
     display: flex;
     justify-content: space-between;
     flex-flow: row-reverse nowrap;
     align-items: center;
+
     @media (min-width: 768px) {
       flex-flow: row nowrap;
     }
@@ -96,51 +42,38 @@ header {
       border: none;
       background: none;
     }
+    p {
+      margin: 0;
+    }
     .autoLogin {
       display: flex;
       padding-block-start: 0.625rem;
 
-      .autoLoginImg {
-        inline-size: var(--checkBtn-width);
-        block-size: var(--checkBtn-height);
-        border-radius: 50%;
-        background-color: #fff;
-        margin-inline-end: 0.3125rem;
+      #autoLoginCheck + label {
+        background-repeat: no-repeat; /* 반복 방지 */
+        background-image: url("../assetes/autoLoginUnCheckImg.svg"); /*off 이미지*/
       }
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-      .check {
-        display: none;
-      }
-      .autoLoginImg:focus {
-        .unCheck {
-          display: none;
-        }
-        .check {
-          display: block;
-        }
+      #autoLoginCheck:checked + label {
+        background-repeat: no-repeat; /* 반복 방지 */
+        background-image: url("../assetes/autoLoginCheckImg.svg"); /*on 이미지*/
       }
     }
   }
 }
 
 .ipSecurity {
-  padding-inline-start: 0.625rem;
-  display: none;
-
-  a {
-    font-size: 1rem;
-    color: #121212;
-    text-decoration: none;
-  }
-  button {
-    color: #dadada;
-  }
   @media (min-width: 768px) {
     display: inline;
+    input {
+      display: none;
+    }
+    label::before {
+      color: #dadada;
+      content: "OFF";
+    }
+    #securityToggle:checked + label::before {
+      color: #03cf5d;
+      content: "ON";
+    }
   }
 }
