@@ -40,7 +40,9 @@ body {
     font-size: 0.625rem;
   }
 }
-
+input:invalid:focus + .errorMessage {
+  display: block;
+}
 /* 로그인 버튼 컴포넌트 */
 .loginBtn {
   inline-size: 100%;
@@ -61,7 +63,6 @@ body {
     border-radius: 50%;
     background-color: transparent;
     margin-inline-end: 0.3125rem;
-    background: url("/src/login/assetes/autoLoginUnCheckImg.svg");
   }
 
   label {

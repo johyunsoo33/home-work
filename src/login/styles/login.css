@@ -76,12 +76,12 @@ header {
       }
 
       #autoLoginCheck + label {
-        background-repeat: no-repeat; /* 반복 방지 */
-        background-image: url("../assetes/autoLoginUnCheckImg.svg"); /*off 이미지*/
+        background-repeat: no-repeat;
+        background-image: url("../assetes/autoLoginUnCheckImg.svg");
       }
       #autoLoginCheck:checked + label {
-        background-repeat: no-repeat; /* 반복 방지 */
-        background-image: url("../assetes/autoLoginCheckImg.svg"); /*on 이미지*/
+        background-repeat: no-repeat;
+        background-image: url("../assetes/autoLoginCheckImg.svg");
       }
     }
   }
@@ -98,7 +98,6 @@ header {
     label::before {
       color: #dadada;
       content: "OFF";
-    
     }
     #securityToggle:checked + label::before {
       color: #03cf5d;
