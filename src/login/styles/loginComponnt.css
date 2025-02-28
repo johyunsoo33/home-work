@@ -7,13 +7,18 @@ body {
   --login-bgColor: #03cf5d;
   --checkBtn-width: 1.5rem;
   --checkBtn-height: 1.5rem;
+  padding-inline: 0.9375rem;
+  padding-top: 4.375rem;
+  padding-bottom: 6.9375rem;
 }
+
 .sr-only {
   position: absolute;
   clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
 }
+
 /* 네이버 로고 컴포넌트 */
 .naverLogo {
   display: block;
@@ -40,9 +45,11 @@ body {
     font-size: 0.625rem;
   }
 }
+
 input:user-invalid + .errorMessage {
   display: block;
 }
+
 /* 로그인 버튼 컴포넌트 */
 .loginBtn {
   inline-size: 100%;

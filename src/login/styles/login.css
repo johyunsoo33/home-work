@@ -15,6 +15,7 @@ header {
     margin: 0 auto;
   }
 }
+
 .loginForm {
   margin: 1.875rem 1.25rem;
   block-size: fit-content;
@@ -44,6 +45,7 @@ header {
       outline: var(--focus-color);
     }
   }
+
   .loginBottomArea {
     display: flex;
     justify-content: space-between;
