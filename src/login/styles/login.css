@@ -27,7 +27,23 @@ header {
     inline-size: 31.25rem;
     margin: 1.875rem auto;
   }
+  .formArea {
+    inline-size: 100%;
 
+    input {
+      inline-size: 100%;
+      font-size: var(--input-text-size);
+      block-size: var(--input-box-height);
+      border: 1px solid var(--border-color);
+      background-color: var(--input-bgColor);
+    }
+
+    input:focus {
+      border-color: #03cf5d;
+      background-color: #e9f0fd;
+      outline: var(--focus-color);
+    }
+  }
   .loginBottomArea {
     display: flex;
     justify-content: space-between;
@@ -49,6 +65,16 @@ header {
       display: flex;
       padding-block-start: 0.625rem;
 
+      .autoLoginImg {
+        margin-inline-start: 0.3125rem;
+      }
+
+      label {
+        inline-size: var(--checkBtn-width);
+        block-size: var(--checkBtn-height);
+        margin-right: 0.325rem;
+      }
+
       #autoLoginCheck + label {
         background-repeat: no-repeat; /* 반복 방지 */
         background-image: url("../assetes/autoLoginUnCheckImg.svg"); /*off 이미지*/
@@ -62,6 +88,8 @@ header {
 }
 
 .ipSecurity {
+  padding-inline-start: 0.625rem;
+
   @media (min-width: 768px) {
     display: inline;
     input {
@@ -70,6 +98,10 @@ header {
     label::before {
       color: #dadada;
       content: "OFF";
+    
+      a{
+        
+      }
     }
     #securityToggle:checked + label::before {
       color: #03cf5d;

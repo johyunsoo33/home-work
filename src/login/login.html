@@ -28,17 +28,32 @@
         <img src="./assetes/naverLogo.svg" alt="네이버 로고 이미지" />
       </a>
     </header>
+    
     <main class="loginForm">
       <form action="\" class="formArea">
-        <input type="email" placeholder="아이디(이메일)" required />
-        <span class="errorMessage"
-          >아이디는 이메일 형식으로 작성해야 합니다</span
-        >
-        <input type="password" placeholder="비밀번호" minlength="10" required />
-        <span class="errorMessage"
-          >비밀번호는 10자리 이내로 입력해주셔야합니다.</span
-        >
+        <label for="userID" class="sr-only">아이디</label>
+        <input
+          type="email"
+          placeholder="아이디(이메일)"
+          name="userID"
+          id="userID"
+          required
+        />
+        <span class="errorMessage">아이디는 이메일 형식으로 작성해야 합니다</span>
+
+        <label for="userID" class="sr-only">비밀번호</label>
+        <input
+          type="password"
+          placeholder="비밀번호"
+          minlength="10"
+          name="userPW"
+          id="userPW"
+          required/>
+
+        <span class="errorMessage">비밀번호는 10자리 이내로 입력해주셔야합니다.</span>
+
         <button type="submit" class="loginBtn">로그인</button>
+
       </form>
 
       <div class="loginBottomArea">
@@ -47,17 +62,28 @@
             class="autoLoginImg"
             type="checkbox"
             id="autoLoginCheck"
-          /><label for="autoLoginCheck"></label>
+            name="autoLoginCheck"/>
+
+            <label
+            for="autoLoginCheck"
+            aria-label="자동로그인 체크이미지"></label>
 
           <p>로그인 상태 유지</p>
+
         </aside>
+        
         <aside class="ipSecurity">
           <a href="./pages/ip_security.html">IP 보안 </a>
           <input
             type="checkbox"
             class="securityToggle"
             id="securityToggle"
-          /><label for="securityToggle"></label>
+            name="securityToggle"/>
+
+            <label
+            for="securityToggle"
+            aria-label="ip보안 on/off 스위치"></label>
+
         </aside>
       </div>
     </main>
