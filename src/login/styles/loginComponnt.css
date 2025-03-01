@@ -37,12 +37,21 @@ body {
   input {
     display: block;
     margin-block-start: 0.625rem;
-    padding: 0.8125rem;
+    padding: 0.8165rem;
+    position: relative;
   }
   .errorMessage {
     display: none;
     color: rgb(255, 63, 63);
     font-size: 0.625rem;
+  }
+  input:focus::placeholder {
+    color: rgb(167, 175, 255);
+    font-size: 8px;
+    position: absolute;
+    top: -0.0625rem;
+    left: 0.225rem;
+    transition: all 0.4s ease;
   }
 }
 
@@ -89,5 +98,7 @@ input:user-invalid + .errorMessage {
     content: "OFF";
     font-weight: 700;
     font-size: 0.875rem;
+    position: relative;
+    opacity: 1;
   }
 }

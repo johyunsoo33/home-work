@@ -70,11 +70,23 @@ header {
         inline-size: var(--checkBtn-width);
         block-size: var(--checkBtn-height);
         appearance: none;
+        position: relative;
         background-repeat: no-repeat;
         background: url("../assetes/autoLoginUnCheckImg.svg") center;
+        transition: opacity 0.5s ease-in-out;
       }
-      .autoLoginImg:checked {
+      .autoLoginImg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
         background-image: url("../assetes/autoLoginCheckImg.svg");
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .autoLoginImg:checked::before {
+        opacity: 1;
       }
     }
   }
@@ -91,6 +103,7 @@ header {
       content: "ON";
       font-weight: 700;
       font-size: 0.875rem;
+      opacity: 1;
     }
   }
 }
