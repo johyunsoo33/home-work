@@ -25,8 +25,10 @@ header {
   }
 
   @media (min-width: 768px) {
+    margin: 3.125rem auto;
     inline-size: 31.25rem;
   }
+
   .formArea {
     inline-size: 100%;
     input {
@@ -49,6 +51,7 @@ header {
     justify-content: space-between;
     flex-flow: row-reverse nowrap;
     align-items: center;
+    align-content: center;
     margin-top: 0.625rem;
 
     @media (min-width: 768px) {
@@ -66,21 +69,14 @@ header {
       display: flex;
 
       .autoLoginImg {
-        margin-inline-start: 0.3125rem;
-      }
-
-      label {
+        margin: 0 0.3125rem 0 0;
         inline-size: var(--checkBtn-width);
         block-size: var(--checkBtn-height);
-        margin-right: 0.325rem;
-      }
-
-      #autoLoginCheck + label {
+        appearance: none;
         background-repeat: no-repeat;
-        background-image: url("../assetes/autoLoginUnCheckImg.svg");
+        background: url("../assetes/autoLoginUnCheckImg.svg") center;
       }
-      #autoLoginCheck:checked + label {
-        background-repeat: no-repeat;
+      .autoLoginImg:checked {
         background-image: url("../assetes/autoLoginCheckImg.svg");
       }
     }
@@ -89,17 +85,14 @@ header {
 
 .ipSecurity {
   @media (min-width: 768px) {
-    display: block;
-    input {
-      display: none;
-    }
-    label::before {
-      color: #dadada;
-      content: "OFF";
-    }
-    #securityToggle:checked + label::before {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    #securityToggle:checked::before {
       color: #03cf5d;
       content: "ON";
+      font-weight: 700;
+      font-size: 0.875rem;
     }
   }
 }

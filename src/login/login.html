@@ -69,10 +69,7 @@
             name="autoLoginCheck"
           />
 
-          <label
-            for="autoLoginCheck"
-            aria-label="자동로그인 체크이미지"
-          ></label>
+          <label for="autoLoginCheck" class="sr-only"></label>
 
           <p>로그인 상태 유지</p>
         </aside>
@@ -86,7 +83,11 @@
             name="securityToggle"
           />
 
-          <label for="securityToggle" aria-label="ip보안 on/off 스위치"></label>
+          <label
+            for="securityToggle"
+            aria-label="ip보안 on/off 스위치"
+            tabindex="0"
+          ></label>
         </aside>
       </div>
     </main>

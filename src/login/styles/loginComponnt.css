@@ -45,6 +45,7 @@ body {
     font-size: 0.625rem;
   }
 }
+
 input:user-invalid + .errorMessage {
   display: block;
 }
@@ -52,7 +53,7 @@ input:user-invalid + .errorMessage {
 .loginBtn {
   inline-size: 100%;
   font-size: 1rem;
-  block-size: var(--input-box-height);
+  block-size: 3.5rem;
   color: #fff;
   background-color: var(--login-bgColor);
   margin-block-start: 1.25rem;
@@ -64,14 +65,9 @@ input:user-invalid + .errorMessage {
 .autoLogin {
   /* 자동 로그인 여부 토글 컴포넌트 */
   .autoLoginImg {
-    display: none;
     border-radius: 50%;
     background-color: transparent;
     margin-inline-end: 0.3125rem;
-  }
-
-  label {
-    display: block;
   }
 }
 
@@ -79,11 +75,18 @@ input:user-invalid + .errorMessage {
 .ipSecurity {
   display: none;
   a {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: #121212;
     text-decoration: none;
   }
-  button {
-    color: #dadada;
+  input {
+    appearance: none;
+    line-height: 1.3125rem;
+  }
+  input::before {
+    color: #999;
+    content: "OFF";
+    font-weight: 700;
+    font-size: 0.875rem;
   }
 }
