@@ -67,7 +67,6 @@ input:user-invalid + .errorMessage {
   .autoLoginImg {
     border-radius: 50%;
     background-color: transparent;
-    margin-inline-end: 0.3125rem;
   }
 }
 
@@ -78,9 +77,11 @@ input:user-invalid + .errorMessage {
     font-size: 0.875rem;
     color: #121212;
     text-decoration: none;
+    margin-inline-end: 0.5rem;
   }
   input {
     appearance: none;
+    margin: 0;
     line-height: 1.3125rem;
   }
   input::before {

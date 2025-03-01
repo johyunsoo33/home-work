@@ -62,6 +62,8 @@ header {
     }
     .autoLogin {
       display: flex;
+      align-items: center;
+      align-content: center;
 
       .autoLoginImg {
         margin: 0 0.3125rem 0 0;
@@ -83,6 +85,7 @@ header {
     display: flex;
     align-items: center;
     align-content: center;
+
     #securityToggle:checked::before {
       color: #03cf5d;
       content: "ON";
