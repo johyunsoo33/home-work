@@ -1,0 +1,54 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+.blueBtn {
+  a {
+    display: inline-block;
+    border: 2px solid var(--blue-300);
+    color: var(--blue-300);
+    border-radius: 30px;
+    margin-right: var(--base-spacing);
+    padding: var(--x-small-spacing) var(--small-spacing);
+    background-color: transparent;
+    font-size: var(--xx-small-text);
+    &:focus,
+    &:hover {
+      background-color: var(--blue-200);
+      border-color: var(--blue-200);
+      color: var(--white);
+    }
+    @media (min-width: 1024px) {
+      font-size: var(--x-small-text);
+    }
+  }
+  .isActive {
+    background-color: var(--blue-300);
+    border-color: var(--blue-300);
+    color: var(--white);
+  }
+}
+.blackBtn {
+  a {
+    display: inline-block;
+    border: 2px solid var(--black);
+    color: var(--black);
+    border-radius: 30px;
+    margin-right: var(--base-spacing);
+    padding: var(--x-small-spacing) var(--small-spacing);
+    background-color: transparent;
+    font-size: var(--xx-small-text);
+    &:focus,
+    &:hover {
+      background-color: #272729;
+      color: var(--white);
+    }
+    @media (min-width: 1024px) {
+      font-size: var(--x-small-text);
+    }
+  }
+
+  .isActive {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}

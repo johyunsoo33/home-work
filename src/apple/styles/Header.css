@@ -1,0 +1,32 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+.navlistContainer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  .navList {
+    max-width: 64rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  li {
+    align-content: center;
+    a {
+      font-size: 12px;
+      line-height: 1.2353641176;
+      font-weight: 600;
+    }
+    img {
+      vertical-align: middle;
+    }
+    &:focus {
+      outline: var(--blue-100);
+    }
+  }
+}

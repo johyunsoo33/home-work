@@ -1,0 +1,47 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+@import "./buttonComponent.css";
+.card {
+  min-height: var(--size);
+  text-align: center;
+  display: inline-flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: var(--small-spacing);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  image-rendering: smooth;
+}
+.cardHeader {
+  .mainText {
+    font-size: var(--large-text);
+    padding-top: 10px;
+    font-weight: 800;
+    margin: var(--small-spacing) 0;
+    @media (min-width: 1024px) {
+      font-size: var(--extra-large-text);
+    }
+  }
+  .subText {
+    font-size: var(--base-text);
+    font-weight: 600;
+    margin: var(--x-small-spacing) 0;
+    line-height: var(--line-normal);
+    @media (min-width: 1024px) {
+      font-size: var(--medium-text);
+    }
+  }
+  .releaseDate {
+    font-size: var(--small-text);
+    display: none;
+    color: var(--gray);
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+.cardBody {
+  margin-bottom: var(--small-spacing);
+}

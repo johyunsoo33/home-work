@@ -1,0 +1,103 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+@import "./Header.css";
+@import "./buttonComponent.css";
+@import "./card-component.css";
+
+/* 카드 레이아웃 */
+.cardContainer {
+  max-width: 100%;
+  display: grid;
+  margin-top: 54px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--small-spacing);
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card-01,
+    .card-02,
+    .card-03 {
+      grid-column: 1/-1;
+    }
+    .card-04 {
+      grid-column: 1/2;
+    }
+    .card-05 {
+      grid-column: 2/3;
+    }
+    .card-06 {
+      grid-column: 1/2;
+    }
+    .card-07 {
+      grid-column: 2/3;
+    }
+  }
+
+  .card-01 {
+    background-image: url(../products/ipad_pro.jpeg);
+    color: var(--white);
+    @media (min-width: 1024px) {
+      background-image: url(../products/ipad_pro_wide.jpeg);
+    }
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/ipad_pro_2x.jpeg) 2x);
+    }
+    @media (min-width: 1024px) and (min-resolution: 2x) {
+      background-image: image-set(url(../products/ipad_pro_wide_2x.jpeg) 2x);
+    }
+  }
+  .card-02 {
+    background-image: url(../products/ipad_air.jpeg);
+    @media (min-width: 1024px) {
+      background-image: url(../products/ipad_air_wide.jpeg);
+    }
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/ipad_air_2x.jpeg) 2x);
+    }
+    @media (min-width: 1024px) and (min-resolution: 2x) {
+      background-image: image-set(url(../products/ipad_air_wide_2x.jpeg) 2x);
+    }
+  }
+  .card-03 {
+    background-image: url(../products/iphone15_pro.jpeg);
+    color: var(--white);
+    @media (min-width: 1024px) {
+      background-image: url(../products/iphone15_pro_wide.jpeg);
+    }
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/iphone15_pro_2x.jpeg) 2x);
+    }
+    @media (min-width: 1024px) and (min-resolution: 2x) {
+      background-image: image-set(
+        url(../products/iphone15_pro_wide_2x.jpeg) 2x
+      );
+    }
+  }
+  .card-04 {
+    background-image: url(../products/iphone15.jpeg);
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/iphone15_2x.jpeg) 2x);
+    }
+  }
+  .card-05 {
+    background-image: url(../products/apple_watch.jpeg);
+    color: var(--white);
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/apple_watch_2x.jpeg) 2x);
+    }
+  }
+  .card-06 {
+    background-image: url(../products/macbook_air.jpeg);
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/macbook_air_2x.jpeg) 2x);
+    }
+  }
+  .card-07 {
+    background-image: url(../products/airpods_pro.jpeg);
+    color: #fff;
+    @media (min-resolution: 2x) {
+      background-image: image-set(url(../products/airpods_pro_2x.jpeg) 2x);
+    }
+  }
+}
