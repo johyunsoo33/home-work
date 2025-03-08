@@ -19,4 +19,4 @@
 
 ##과제 영상
 ### 압축하는 과정에서 화질이 좀 깨졌습니다 ㅠㅠ
-![애플 과제 영상](./Apple_test.mp4 "애플과제 영상")
+![애플 과제 영상](https://github.com/user-attachments/assets/62491274-b49f-4d57-92e4-ff0c19772d8c "애플 과제 영상")
