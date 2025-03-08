@@ -2,6 +2,7 @@
 @import "./theme.css";
 @import "./base.css";
 .blueBtn {
+  z-index: 4;
   a {
     display: inline-block;
     border: 2px solid var(--blue-300);
@@ -28,6 +29,7 @@
   }
 }
 .blackBtn {
+  z-index: 4;
   a {
     display: inline-block;
     border: 2px solid var(--black);
