@@ -15,28 +15,29 @@
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
 
-    .card-01,
-    .card-02,
-    .card-03 {
+    .iPadPro,
+    .iPadAir,
+    .iPhone15Pro {
       grid-column: 1/-1;
     }
-    .card-04 {
+    .iPhone15 {
       grid-column: 1/2;
     }
-    .card-05 {
+    .WATCH {
       grid-column: 2/3;
     }
-    .card-06 {
+    .MacBookAir {
       grid-column: 1/2;
     }
-    .card-07 {
+    .airPodspro {
       grid-column: 2/3;
     }
   }
 
-  .card-01 {
+  .iPadPro {
     background-image: url(../products/ipad_pro.jpeg);
     color: var(--white);
+    background-color: #000;
     @media (min-width: 1024px) {
       background-image: url(../products/ipad_pro_wide.jpeg);
     }
@@ -47,8 +48,9 @@
       background-image: image-set(url(../products/ipad_pro_wide_2x.jpeg) 2x);
     }
   }
-  .card-02 {
+  .iPadAir {
     background-image: url(../products/ipad_air.jpeg);
+    background-color: #addcee;
     @media (min-width: 1024px) {
       background-image: url(../products/ipad_air_wide.jpeg);
     }
@@ -59,9 +61,11 @@
       background-image: image-set(url(../products/ipad_air_wide_2x.jpeg) 2x);
     }
   }
-  .card-03 {
+  .iPhone15Pro {
     background-image: url(../products/iphone15_pro.jpeg);
     color: var(--white);
+    background-color: #000;
+    background-position: center 60px;
     @media (min-width: 1024px) {
       background-image: url(../products/iphone15_pro_wide.jpeg);
     }
@@ -74,28 +78,34 @@
       );
     }
   }
-  .card-04 {
+  .iPhone15 {
     background-image: url(../products/iphone15.jpeg);
+    background-color: #f5f5f7;
     @media (min-resolution: 2x) {
       background-image: image-set(url(../products/iphone15_2x.jpeg) 2x);
     }
   }
-  .card-05 {
+  .WATCH {
     background-image: url(../products/apple_watch.jpeg);
     color: var(--white);
+    background-color: #000;
     @media (min-resolution: 2x) {
       background-image: image-set(url(../products/apple_watch_2x.jpeg) 2x);
     }
   }
-  .card-06 {
+  .MacBookAir {
     background-image: url(../products/macbook_air.jpeg);
+    background-color: #f5f5f7;
+    background-position: center 60px;
     @media (min-resolution: 2x) {
       background-image: image-set(url(../products/macbook_air_2x.jpeg) 2x);
     }
   }
-  .card-07 {
+  .airPodspro {
     background-image: url(../products/airpods_pro.jpeg);
     color: #fff;
+    background-position: center 0px;
+    background-color: #000;
     @media (min-resolution: 2x) {
       background-image: image-set(url(../products/airpods_pro_2x.jpeg) 2x);
     }

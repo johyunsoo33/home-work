@@ -17,16 +17,21 @@
   }
   li {
     align-content: center;
+    padding: 0;
+    margin: 0;
     a {
+      display: block;
+      width: fit-content;
       font-size: 12px;
       line-height: 1.2353641176;
       font-weight: 600;
+      &:focus {
+        outline-color: var(--blue-100);
+      }
     }
     img {
-      vertical-align: middle;
-    }
-    &:focus {
-      outline: var(--blue-100);
+      display: block;
+      width: 100%;  
     }
   }
 }
